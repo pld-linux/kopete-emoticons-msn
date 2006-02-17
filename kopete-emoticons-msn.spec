@@ -1,7 +1,7 @@
 Summary:	Kopete MSN 6.0 emoticons
 Name:		kopete-emoticons-msn
 Version:	2.01
-Release:	0.1
+Release:	0.2
 License:	GPL
 Group:		Themes
 Source0:	http://www.kde-look.org/content/files/6721-crystal_v2.tar.gz
@@ -12,7 +12,7 @@ Requires:	kdenetwork-kopete-protocol-msn
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_kopetedir	%{_datadir}/apps/kopete/pics/emoticons
+%define		_kopetedir	%{_datadir}/emoticons
 %define		_themedir	%{_kopetedir}/MSN
 
 %description
