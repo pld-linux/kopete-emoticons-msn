@@ -1,11 +1,12 @@
 Summary:	Kopete MSN 6.0 emoticons
 Name:		kopete-emoticons-msn
 Version:	2.01
-Release:	0.2
+Release:	0.3
 License:	GPL
 Group:		Themes
 Source0:	http://www.kde-look.org/content/files/6721-crystal_v2.tar.gz
 # Source0-md5:	a5584a5f300b7efd647904da023e286b
+Patch0:		%{name}.patch
 URL:		http://www.kde-look.org/content/show.php?content=6721
 Requires:	kdenetwork-kopete
 Requires:	kdenetwork-kopete-protocol-msn
@@ -20,6 +21,7 @@ MSN 6.0 emoticons for Kopete.
 
 %prep
 %setup -q -n crystal_v2
+%patch0 -p0
 
 %install
 rm -rf $RPM_BUILD_ROOT%{_themedir}
