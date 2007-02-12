@@ -1,5 +1,5 @@
 Summary:	Kopete MSN 6.0 emoticons
-Summary(pl):	Emotikony MSN 6.0 dla Kopete
+Summary(pl.UTF-8):   Emotikony MSN 6.0 dla Kopete
 Name:		kopete-emoticons-msn
 Version:	2.01
 Release:	0.3
@@ -20,7 +20,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 MSN 6.0 emoticons for Kopete.
 
-%description -l pl
+%description -l pl.UTF-8
 Emotikony MSN 6.0 dla Kopete.
 
 %prep
