@@ -1,31 +1,35 @@
-Summary:	Kopete MSN 6.0 emoticons
-Summary(pl.UTF-8):	Emotikony MSN 6.0 dla Kopete
+Summary:	Kopete MSN emoticons
+Summary(pl.UTF-8):	Emotikony MSN dla Kopete
 Name:		kopete-emoticons-msn
-Version:	2.01
-Release:	0.3
-License:	GPL
+Version:	2.03
+Release:	0.1
+License:	Downloaded from web. Public Domain?
 Group:		Themes
-Source0:	http://www.kde-look.org/content/files/6721-crystal_v2.tar.gz
-# Source0-md5:	a5584a5f300b7efd647904da023e286b
-Patch0:		%{name}.patch
-URL:		http://www.kde-look.org/content/show.php?content=6721
+Source0:	http://glen.alkohol.ee/gaim-smileys/msn-emoticons-%{version}.tar.bz2
+# Source0-md5:	406996b8263f5b57e03435112fae5968
+#Source0:	http://www.kde-look.org/content/files/6721-crystal_v2.tar.gz
+#Patch0: %{name}.patch
+URL:		http://messenger.msn.com/Resource/Emoticons.aspx
+#URL:		http://www.kde-look.org/content/show.php?content=6721
 Requires:	kdenetwork-kopete
 Requires:	kdenetwork-kopete-protocol-msn
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_kopetedir	%{_datadir}/emoticons
-%define		_themedir	%{_kopetedir}/MSN
+%define		_themedir	%{_datadir}/emoticons/MSN
 
 %description
-MSN 6.0 emoticons for Kopete.
+Emoticons are emotional graphics - visual ways to express the way you
+feel when words alone just aren't enough.
+
+MSN emoticons for Kopete.
 
 %description -l pl.UTF-8
-Emotikony MSN 6.0 dla Kopete.
+Emotikony MSN dla Kopete.
 
 %prep
-%setup -q -n crystal_v2
-%patch0 -p0
+%setup -q -n msn-emoticons
+#%patch0 -p0
 
 %install
 rm -rf $RPM_BUILD_ROOT
